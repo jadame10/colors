@@ -62,7 +62,7 @@ useEffect(() => {
 }, [path, navigate, parentCounter])
 
 const refreshPage = () => {
-  window.location.href('https://jadame10.github.io/colors/');
+  window.location.replace('https://jadame10.github.io/colors/');
 }
  const changePages = (event, page) => {
   event.preventDefault();
