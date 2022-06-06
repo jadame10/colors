@@ -61,6 +61,9 @@ useEffect(() => {
   : navigate(path === 0 ? `/` : `/page=${path}`, { replace: true })
 }, [path, navigate, parentCounter])
 
+const refreshPage = () => {
+  window.location.href('https://jadame10.github.io/colors/');
+}
  const changePages = (event, page) => {
   event.preventDefault();
   setPage(page+1);
@@ -115,6 +118,7 @@ return (
       </Table>
     </TableContainer>
     {parentCounter ? <Pagination count={1} 
+        onClick = {(e) => refreshPage(e)} 
         page = {parseInt(parentCounter)}
         component={Link}
         to =  {`/`} 
