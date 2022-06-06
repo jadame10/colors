@@ -66,7 +66,9 @@ useEffect(() => {
   setPage(page+1);
   setPath(page+1);
  }
-
+const refreshPage = () => {
+  window.location.reload('');
+}
  if (!data) {
   return <div>Loadding...</div>;
 }
@@ -115,6 +117,7 @@ return (
       </Table>
     </TableContainer>
     {parentCounter ? <Pagination count={1} 
+        onClick = {(e) => refreshPage(e)} 
         page = {parseInt(parentCounter)}
         component={Link}
         to =  {`/`} 
